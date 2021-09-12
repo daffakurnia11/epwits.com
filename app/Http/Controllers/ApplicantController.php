@@ -44,7 +44,7 @@ class ApplicantController extends Controller
             'motivation'    => 'required',
             'screenshot'    => 'required|mimes:JPG,jpg,png,jpeg|max:5048',
             'cv'            => 'required|mimes:pdf|max:5048',
-            'portfolio'     => 'required|url',
+            'portfolio'     => 'nullable|url',
         ]);
 
         $choiceData = $request->validate([

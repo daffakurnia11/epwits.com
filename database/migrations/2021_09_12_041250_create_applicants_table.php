@@ -22,7 +22,7 @@ class CreateApplicantsTable extends Migration
             $table->text('motivation');
             $table->string('screenshot');
             $table->string('cv');
-            $table->string('portfolio');
+            $table->string('portfolio')->nullable();
             $table->timestamps();
         });
     }
