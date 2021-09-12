@@ -19,4 +19,20 @@ class Applicant extends Model
         'cv',
         'portfolio',
     ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at',
+        // your other new column
+    ];
+
+    public function choice()
+    {
+        return $this->hasOne(Choice::class);
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'nrp';
+    }
 }

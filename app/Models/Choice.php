@@ -23,4 +23,9 @@ class Choice extends Model
         'public_relation',
         'secretarial',
     ];
+
+    public function applicant()
+    {
+        return $this->belongsTo(Applicant::class);
+    }
 }

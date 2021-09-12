@@ -15,7 +15,9 @@ class ApplicantController extends Controller
      */
     public function index()
     {
-        return view('oprec.index');
+        return view('admin.applicant.index', [
+            'applicants' => Applicant::latest()->get()
+        ]);
     }
 
     /**
@@ -25,7 +27,7 @@ class ApplicantController extends Controller
      */
     public function create()
     {
-        //
+        return view('oprec.index');
     }
 
     /**
@@ -38,8 +40,8 @@ class ApplicantController extends Controller
     {
         $applicantData = $request->validate([
             'name'          => 'required|max:255',
-            'nrp'           => 'required|numeric',
-            'email'         => 'required|max:255|email:dns',
+            'nrp'           => 'required|numeric|unique:applicants',
+            'email'         => 'required|max:255|email:dns|unique:applicants',
             'line_id'       => 'required|max:255|unique:applicants',
             'motivation'    => 'required',
             'screenshot'    => 'required|mimes:JPG,jpg,png,jpeg|max:5048',
@@ -84,7 +86,7 @@ class ApplicantController extends Controller
      */
     public function show(Applicant $applicant)
     {
-        //
+        return view('admin.applicant.show', compact('applicant'));
     }
 
     /**
@@ -118,6 +120,21 @@ class ApplicantController extends Controller
      */
     public function destroy(Applicant $applicant)
     {
-        //
+        $choice = Choice::firstWhere('applicant_id', $applicant->id);
+
+        unlink(public_path("files/cv/$applicant->cv"));
+        unlink(public_path("files/screenshot/$applicant->screenshot"));
+
+        $choice->delete();
+        $applicant->delete();
+
+        return redirect('/admin/applicant')->with('message', 'Data has been deleted!');
+    }
+
+    public function priority()
+    {
+        return view('admin.applicant.priority', [
+            'applicants' => Applicant::all()
+        ]);
     }
 }

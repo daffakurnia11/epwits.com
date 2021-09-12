@@ -20,7 +20,7 @@
 <body class="hold-transition register-page">
 <div class="register-box" style="width:900px;max-width:100%">
   <div class="register-logo mt-5">
-    <a href="" class="font-weight-bold">Engineering Physics Week 2022</a>
+    <a href="" class="font-weight-bold">Staff Open Recruitment EPW 2022</a>
   </div>
 
   <div class="card mx-2 mb-4">
@@ -36,7 +36,7 @@
       <p class="login-box-msg">Please register yourself!</p>
       @endif
 
-      <form action="/applicant" method="post" enctype="multipart/form-data">
+      <form action="/applicantsubmit" method="post" enctype="multipart/form-data">
         @csrf
         <div class="row">
           <div class="col-sm-6">

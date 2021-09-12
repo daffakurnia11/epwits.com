@@ -531,6 +531,7 @@ class ComposerStaticInite3619a7003bb147a0214955b65aff8bd
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\Applicant' => __DIR__ . '/../..' . '/app/Models/Applicant.php',
         'App\\Models\\Choice' => __DIR__ . '/../..' . '/app/Models/Choice.php',
+        'App\\Models\\Shortlink' => __DIR__ . '/../..' . '/app/Models/Shortlink.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
