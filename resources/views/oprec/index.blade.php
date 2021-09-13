@@ -131,7 +131,10 @@
           </div>
           <div class="row">
             <div class="col-6 col-sm-3">
-              Fundraising
+              <span class="@error('fundraising') text-danger @enderror">Fundraising</span><br>
+              @error('fundraising')
+                  <small class="text-danger">{{ $message }}</small>
+              @enderror
             </div>
             <div class="col-6 col-sm-9 d-flex">
               <div class="form-group mx-2 mx-md-3 d-inline">
@@ -171,7 +174,10 @@
           </div>
           <div class="row">
             <div class="col-6 col-sm-3">
-              Sponsorship
+              <span class="@error('sponsorship') text-danger @enderror">Sponsorship</span><br>
+              @error('sponsorship')
+                  <small class="text-danger">{{ $message }}</small>
+              @enderror
             </div>
             <div class="col-6 col-sm-9 d-flex">
               <div class="form-group mx-2 mx-md-3 d-inline">
@@ -211,7 +217,10 @@
           </div>
           <div class="row">
             <div class="col-6 col-sm-3">
-              EPC
+              <span class="@error('epc') text-danger @enderror">EPC</span><br>
+              @error('epc')
+                  <small class="text-danger">{{ $message }}</small>
+              @enderror
             </div>
             <div class="col-6 col-sm-9 d-flex">
               <div class="form-group mx-2 mx-md-3 d-inline">
@@ -251,7 +260,10 @@
           </div>
           <div class="row">
             <div class="col-6 col-sm-3">
-              SNOW
+              <span class="@error('snow') text-danger @enderror">SNOW</span><br>
+              @error('snow')
+                  <small class="text-danger">{{ $message }}</small>
+              @enderror
             </div>
             <div class="col-6 col-sm-9 d-flex">
               <div class="form-group mx-2 mx-md-3 d-inline">
@@ -291,7 +303,10 @@
           </div>
           <div class="row">
             <div class="col-6 col-sm-3">
-              Big Event
+              <span class="@error('big_event') text-danger @enderror">Big Event</span><br>
+              @error('big_event')
+                  <small class="text-danger">{{ $message }}</small>
+              @enderror
             </div>
             <div class="col-6 col-sm-9 d-flex">
               <div class="form-group mx-2 mx-md-3 d-inline">
@@ -331,7 +346,10 @@
           </div>
           <div class="row">
             <div class="col-6 col-sm-3">
-              Technical
+              <span class="@error('technical') text-danger @enderror">Technical</span><br>
+              @error('technical')
+                  <small class="text-danger">{{ $message }}</small>
+              @enderror
             </div>
             <div class="col-6 col-sm-9 d-flex">
               <div class="form-group mx-2 mx-md-3 d-inline">
@@ -371,7 +389,10 @@
           </div>
           <div class="row">
             <div class="col-6 col-sm-3">
-              IT
+              <span class="@error('itdev') text-danger @enderror">IT</span><br>
+              @error('itdev')
+                  <small class="text-danger">{{ $message }}</small>
+              @enderror
             </div>
             <div class="col-6 col-sm-9 d-flex">
               <div class="form-group mx-2 mx-md-3 d-inline">
@@ -411,7 +432,10 @@
           </div>
           <div class="row">
             <div class="col-6 col-sm-3">
-              Media
+              <span class="@error('media') text-danger @enderror">Media</span><br>
+              @error('media')
+                  <small class="text-danger">{{ $message }}</small>
+              @enderror
             </div>
             <div class="col-6 col-sm-9 d-flex">
               <div class="form-group mx-2 mx-md-3 d-inline">
@@ -451,7 +475,10 @@
           </div>
           <div class="row">
             <div class="col-6 col-sm-3">
-              Creative
+              <span class="@error('creative') text-danger @enderror">Creative</span><br>
+              @error('creative')
+                  <small class="text-danger">{{ $message }}</small>
+              @enderror
             </div>
             <div class="col-6 col-sm-9 d-flex">
               <div class="form-group mx-2 mx-md-3 d-inline">
@@ -491,7 +518,10 @@
           </div>
           <div class="row">
             <div class="col-6 col-sm-3">
-              Public Relation
+              <span class="@error('public_relation') text-danger @enderror">Public Relation</span><br>
+              @error('public_relation')
+                  <small class="text-danger">{{ $message }}</small>
+              @enderror
             </div>
             <div class="col-6 col-sm-9 d-flex">
               <div class="form-group mx-2 mx-md-3 d-inline">
@@ -531,7 +561,10 @@
           </div>
           <div class="row">
             <div class="col-6 col-sm-3">
-              Secretarial
+              <span class="@error('secretarial') text-danger @enderror">Secretarial</span><br>
+              @error('secretarial')
+                  <small class="text-danger">{{ $message }}</small>
+              @enderror
             </div>
             <div class="col-6 col-sm-9 d-flex">
               <div class="form-group mx-2 mx-md-3 d-inline">

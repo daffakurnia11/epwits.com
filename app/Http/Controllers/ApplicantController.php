@@ -50,17 +50,17 @@ class ApplicantController extends Controller
         ]);
 
         $choiceData = $request->validate([
-            'fundraising'       => 'nullable|numeric',
-            'sponsorship'       => 'nullable|numeric',
-            'epc'               => 'nullable|numeric',
-            'snow'              => 'nullable|numeric',
-            'big_event'         => 'nullable|numeric',
-            'technical'         => 'nullable|numeric',
-            'itdev'             => 'nullable|numeric',
-            'media'             => 'nullable|numeric',
-            'creative'          => 'nullable|numeric',
-            'public_relation'   => 'nullable|numeric',
-            'secretarial'       => 'nullable|numeric',
+            'fundraising'       => 'required|numeric',
+            'sponsorship'       => 'required|numeric',
+            'epc'               => 'required|numeric',
+            'snow'              => 'required|numeric',
+            'big_event'         => 'required|numeric',
+            'technical'         => 'required|numeric',
+            'itdev'             => 'required|numeric',
+            'media'             => 'required|numeric',
+            'creative'          => 'required|numeric',
+            'public_relation'   => 'required|numeric',
+            'secretarial'       => 'required|numeric',
         ]);
 
         $screenshotImage = $request->nrp . '-screenshot.' . $request->screenshot->extension();
