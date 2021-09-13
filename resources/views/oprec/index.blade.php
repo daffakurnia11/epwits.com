@@ -92,6 +92,8 @@
         </div>
         
         <div class="priority-choice" style="width:100%; overflow-x: auto;">
+          <label for="">Priority Choice</label>
+          <p>Please choose your priority, smallest is your priority</p>
           <div class="row justify-content-end">
             <div class="col-6 col-sm-9 d-flex label-number">
               <div class="form-group mx-2 mx-md-3 d-inline">
