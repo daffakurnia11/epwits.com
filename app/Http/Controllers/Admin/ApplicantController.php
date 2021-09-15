@@ -1,9 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Applicant;
 use App\Models\Choice;
+use App\Models\Schedule;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ApplicantController extends Controller
@@ -27,6 +30,12 @@ class ApplicantController extends Controller
      */
     public function create()
     {
+        $deadline = Carbon::create(2021, 9, 16, 22, 1, 0);
+        $timenow = Carbon::now();
+
+        if ($deadline->lessThan($timenow)) {
+            return view('oprec.closed');
+        }
         return view('oprec.index');
     }
 
@@ -38,6 +47,12 @@ class ApplicantController extends Controller
      */
     public function store(Request $request)
     {
+        $deadline = Carbon::create(2021, 9, 16, 22, 1, 0);
+        $timenow = Carbon::now();
+
+        if ($deadline->lessThan($timenow)) {
+            return view('oprec.closed');
+        }
         $applicantData = $request->validate([
             'name'          => 'required|max:255',
             'nrp'           => 'required|numeric|unique:applicants',
@@ -90,29 +105,6 @@ class ApplicantController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Applicant  $applicant
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Applicant $applicant)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Applicant  $applicant
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Applicant $applicant)
-    {
-        //
-    }
-
-    /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Applicant  $applicant
@@ -136,5 +128,39 @@ class ApplicantController extends Controller
         return view('admin.applicant.priority', [
             'applicants' => Applicant::all()
         ]);
+    }
+
+    public function interviewAnnouncement()
+    {
+        return view('oprec.interview');
+    }
+
+    public function interviewSchedule(Request $request)
+    {
+        $data = Schedule::firstWhere('nrp', $request->nrp);
+        if ($data) {
+            $name = $data->name;
+            $breakout = $data->breakout;
+            $schedule = $data->schedule;
+            return redirect('InterviewAnnouncement')->with('message', $schedule)->with('breakout', $breakout)->with('name', $name);
+        } else {
+            return redirect('InterviewAnnouncement')->with('message', 'No Data');
+        }
+    }
+
+    public function staffAnnouncement()
+    {
+        return view('oprec.staff');
+    }
+
+    public function welcomeparty(Request $request)
+    {
+        $data = Schedule::whereNotNull('acceptance')->firstWhere('nrp', $request->nrp);
+        if ($data) {
+            $name = $data->name;
+            return redirect('StaffAnnouncement')->with('message', $name);
+        } else {
+            return redirect('StaffAnnouncement')->with('message', 'No Data');
+        }
     }
 }

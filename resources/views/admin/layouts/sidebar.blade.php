@@ -84,6 +84,14 @@
             </p>
           </a>
         </li>
+        <li class="nav-item">
+          <a href="/admin/interview" class="nav-link {{ Request::is('admin/interview') ? 'active' : '' }}">
+            <i class="nav-icon fas fa-fw fa-scroll"></i>
+            <p>
+              Interview Announcement
+            </p>
+          </a>
+        </li>
 
       </ul>
     </nav>
