@@ -30,7 +30,7 @@ class ApplicantController extends Controller
      */
     public function create()
     {
-        $deadline = Carbon::create(2021, 9, 16, 22, 1, 0);
+        $deadline = Carbon::create(2021, 9, 16, 20, 1, 0);
         $timenow = Carbon::now();
 
         if ($deadline->lessThan($timenow)) {
@@ -47,7 +47,7 @@ class ApplicantController extends Controller
      */
     public function store(Request $request)
     {
-        $deadline = Carbon::create(2021, 9, 16, 22, 1, 0);
+        $deadline = Carbon::create(2021, 9, 16, 20, 1, 0);
         $timenow = Carbon::now();
 
         if ($deadline->lessThan($timenow)) {
