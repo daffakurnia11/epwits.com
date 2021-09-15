@@ -80,7 +80,7 @@
                     @csrf
                     @method('DELETE')
                     <a href="/admin/applicant/{{ $applicant->nrp }}" class="btn btn-sm btn-info"><i class="fas fa-fw fa-eye"></i></a>
-                    <button type="submit" class="btn btn-sm btn-danger" style="border-color: none" onclick="confirm('Are you sure to delete this link?')"><i class="fas fa-fw fa-trash"></i></button>
+                    {{-- <button type="submit" class="btn btn-sm btn-danger" style="border-color: none" onclick="confirm('Are you sure to delete this link?')"><i class="fas fa-fw fa-trash"></i></button> --}}
                   </form>
                 </td>
               </tr>
