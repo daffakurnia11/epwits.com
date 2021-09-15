@@ -273,38 +273,6 @@
 
             </div>
           </div>
-
-          <div class="card card-success">
-            <div class="card-header">
-              <h3 class="card-title">Interview Schedule</h3>
-            </div>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="name">Breakout Room</label>
-                    <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" placeholder="Enter the link name" value="{{ old('name') }}">
-                    @error('name')
-                    <div class="invalid-feedback">
-                      {{ $message }}
-                    </div>
-                    @enderror
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="name">Schedule</label>
-                    <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" placeholder="Enter the link name" value="{{ old('name') }}">
-                    @error('name')
-                    <div class="invalid-feedback">
-                      {{ $message }}
-                    </div>
-                    @enderror
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         
       </div>
