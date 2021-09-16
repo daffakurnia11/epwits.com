@@ -5,7 +5,8 @@ use App\Http\Controllers\Admin\ApplicantController;
 use App\Http\Controllers\Admin\ShortlinkController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\AdminController;
-use App\Models\Applicant;
+
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,10 @@ use App\Models\Applicant;
 */
 
 // FOR MAIN WEBSITE
-Route::get('/', [ApplicantController::class, 'create']);
+// Route::get('/', [ApplicantController::class, 'create']);
+Route::get('/', [PagesController::class, 'comingsoon']);
+
+// FOR OPEN RECRUITMENT
 Route::post('/applicantsubmit', [ApplicantController::class, 'store']);
 Route::get('/InterviewAnnouncement', [ApplicantController::class, 'interviewAnnouncement']);
 Route::post('/InterviewAnnouncement', [ApplicantController::class, 'interviewSchedule']);
@@ -47,3 +51,6 @@ Route::prefix('admin')->middleware(['auth', 'checkRole:Dev,Admin'])->group(funct
 
 // FOR SHORT LINKS
 Route::get('/{shortlink:short}', [ShortlinkController::class, 'show']);
+Route::fallback(function () {
+  return view('errors.404');
+});
