@@ -48,7 +48,8 @@
                 <th>Name</th>
                 <th>NRP</th>
                 <th>Breakout</th>
-                <th>Schedule</th>
+                <th>Day, Date</th>
+                <th>Time</th>
                 <th>Staff Acceptance</th>
               </tr>
             </thead>
@@ -59,7 +60,8 @@
                 <td class="text-nowrap align-middle">{{ $applicant->name }}</td>
                 <td class="text-nowrap align-middle">{{ $applicant->nrp }}</td>
                 <td class="text-nowrap align-middle">{{ $applicant->breakout }}</td>
-                <td class="text-nowrap align-middle">{{ $applicant->schedule }}</td>
+                <td class="text-nowrap align-middle">{{ $applicant->date }}</td>
+                <td class="text-nowrap align-middle">{{ $applicant->time }}</td>
                 <td class="text-center text-nowrap align-middle">
                   @if ($applicant->acceptance)
                     <p class="mb-0">Accepted!</p>
@@ -82,7 +84,8 @@
                 <th>Name</th>
                 <th>NRP</th>
                 <th>Breakout</th>
-                <th>Schedule</th>
+                <th>Day, Date</th>
+                <th>Time</th>
                 <th>Staff Acceptance</th>
               </tr>
             </tfoot>

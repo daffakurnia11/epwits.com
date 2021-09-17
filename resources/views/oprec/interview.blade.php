@@ -37,15 +37,18 @@
           </div>
         @else
           <div class="invitation mt-3">
-            <p>Dear, <strong>{{ session('name') }}</strong></p>
+            <p>Dear, <strong>{{ session('message') }}</strong></p>
             <p class="mb-0">Thanks for your participation in the Staff Open Recruitment EPW 2022.</p>
             <p>Here are the instructions for your interview, please follow the instructions below.</p>
 
-            <div class="text-center">
+            <div class="text-left">
               <p class="mb-0">Please join the interview using the link below :</p>
-              <a href="https://	epwits.com/InterviewEPW2022" class="d-inline-block my-2" target="_blank">	epwits.com/InterviewEPW2022</a>
-              <p class="mb-0">You must join the interview at <strong>{{ session('message') }}</strong></p>
-              <p>Your breakout room is : <strong>{{ session('breakout') }}</strong></p>
+              <div class="text-center my-2">
+                <a href="https://epwits.com/InterviewEPW2022" target="_blank">epwits.com/InterviewEPW2022</a>
+              </div>
+              <p class="mb-0">You must join the interview on</p>
+              <p class="text-center"><strong>{{ session('date') }}</strong> at <strong>{{ session('time') }}</strong></p>
+              <p>Your breakout room is : <strong>BREAKOUT {{ session('breakout') }}</strong></p>
             </div>
 
             <p>Thank You</p>

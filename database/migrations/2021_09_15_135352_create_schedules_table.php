@@ -18,7 +18,8 @@ class CreateSchedulesTable extends Migration
             $table->string('name');
             $table->string('nrp');
             $table->string('breakout')->nullable();
-            $table->string('schedule')->nullable();
+            $table->string('date')->nullable();
+            $table->string('time')->nullable();
             $table->string('acceptance')->nullable();
             $table->timestamps();
         });

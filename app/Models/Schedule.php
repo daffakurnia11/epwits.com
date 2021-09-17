@@ -9,5 +9,5 @@ class Schedule extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'nrp', 'breakout', 'schedule', 'acceptance'];
+    protected $fillable = ['name', 'nrp', 'breakout', 'date', 'time', 'acceptance'];
 }

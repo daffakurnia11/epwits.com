@@ -147,8 +147,9 @@ class ApplicantController extends Controller
         if ($data) {
             $name = $data->name;
             $breakout = $data->breakout;
-            $schedule = $data->schedule;
-            return redirect('InterviewAnnouncement')->with('message', $schedule)->with('breakout', $breakout)->with('name', $name);
+            $date = $data->date;
+            $time = $data->time;
+            return redirect('InterviewAnnouncement')->with('message', $name)->with('breakout', $breakout)->with('date', $date)->with('time', $time);
         } else {
             return redirect('InterviewAnnouncement')->with('message', 'No Data');
         }
@@ -156,7 +157,7 @@ class ApplicantController extends Controller
 
     public function staffAnnouncement()
     {
-        $deadline = Carbon::create(2021, 9, 25, 9, 0, 0);
+        $deadline = Carbon::create(2021, 9, 17, 9, 0, 0);
         $timenow = Carbon::now();
 
         if ($deadline->lessThan($timenow)) {
