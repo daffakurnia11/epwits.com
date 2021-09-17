@@ -132,7 +132,7 @@ class ApplicantController extends Controller
 
     public function interviewAnnouncement()
     {
-        $deadline = Carbon::create(2021, 9, 17, 20, 0, 0);
+        $deadline = Carbon::create(2021, 9, 17, 17, 0, 0);
         $timenow = Carbon::now();
 
         if ($deadline->lessThan($timenow)) {

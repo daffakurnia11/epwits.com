@@ -50,6 +50,11 @@
               <p class="text-center"><strong>{{ session('date') }}</strong> at <strong>{{ session('time') }}</strong></p>
               <p>Your breakout room is : <strong>BREAKOUT {{ session('breakout') }}</strong></p>
             </div>
+            <p>
+              If you have any questions or problems, please contact<br>
+              <a href="http://line.me/ti/p/~raihan_000" target="_blank">Raihan (Line : raihan_000)</a><br>
+              <a href="http://line.me/ti/p/~anjelitarsptr" target="_blank">Anjelita (Line : anjelitarsptr)</a>
+            </p>
 
             <p>Thank You</p>
             <p>Sincerely, EPW 2022</p>
