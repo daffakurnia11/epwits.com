@@ -132,7 +132,13 @@ class ApplicantController extends Controller
 
     public function interviewAnnouncement()
     {
-        return view('oprec.interview');
+        $deadline = Carbon::create(2021, 9, 17, 20, 0, 0);
+        $timenow = Carbon::now();
+
+        if ($deadline->lessThan($timenow)) {
+            return view('oprec.interview');
+        }
+        return view('errors.404');
     }
 
     public function interviewSchedule(Request $request)
@@ -150,7 +156,13 @@ class ApplicantController extends Controller
 
     public function staffAnnouncement()
     {
-        return view('oprec.staff');
+        $deadline = Carbon::create(2021, 9, 25, 9, 0, 0);
+        $timenow = Carbon::now();
+
+        if ($deadline->lessThan($timenow)) {
+            return view('oprec.staff');
+        }
+        return view('errors.404');
     }
 
     public function welcomeparty(Request $request)

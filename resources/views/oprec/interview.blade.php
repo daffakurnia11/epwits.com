@@ -43,7 +43,7 @@
 
             <div class="text-center">
               <p class="mb-0">Please join the interview using the link below :</p>
-              <a href="https://epwits.com/ZoomInterview" class="d-inline-block my-2" target="_blank">epwits.com/ZoomInterview</a>
+              <a href="https://	epwits.com/InterviewEPW2022" class="d-inline-block my-2" target="_blank">	epwits.com/InterviewEPW2022</a>
               <p class="mb-0">You must join the interview at <strong>{{ session('message') }}</strong></p>
               <p>Your breakout room is : <strong>{{ session('breakout') }}</strong></p>
             </div>

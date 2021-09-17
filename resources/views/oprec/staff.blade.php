@@ -47,9 +47,9 @@
             </div>
 
             <p class="mb-0">Here is our Virtual Background : </p>
-            <a href="https://epwits.com/ZoomInterview" class="d-block mb-2 text-center" target="_blank">epwits.com/WelcomeParty</a>
+            <a href="https://epwits.com/VirtualBackgroundWP" class="d-block mb-2 text-center" target="_blank">epwits.com/VirtualBackgroundWP</a>
             <p class="mb-0">Here is our Zoom Link : </p>
-            <a href="https://epwits.com/ZoomInterview" class="d-block mb-2 text-center" target="_blank">epwits.com/VBGWelcomeParty</a>
+            <a href="https://epwits.com/HaloStaffEPW" class="d-block mb-2 text-center" target="_blank">epwits.com/HaloStaffEPW</a>
             
             <p>Thank You</p>
             <p>Sincerely, EPW 2022</p>
