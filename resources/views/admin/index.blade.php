@@ -52,6 +52,20 @@
           </div>
           <!-- /.info-box -->
         </div>
+        <div class="col-lg-3 pb-3">
+          <div class="info-box">
+            <span class="info-box-icon bg-primary elevation-1"><i class="fas fa-user-graduate"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Staff Acceptance</span>
+              <span class="info-box-number">
+                {{ $staffs }}
+              </span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
       </div>
     </div><!-- /.container-fluid -->
   </div>

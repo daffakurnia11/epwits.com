@@ -46,8 +46,9 @@ class AdminController extends Controller
     public function dashboard()
     {
         return view('admin.index', [
-            'shortlinks'      => Shortlink::all()->count(),
-            'applicants'      => Applicant::all()->count(),
+            'shortlinks'        => Shortlink::all()->count(),
+            'applicants'        => Applicant::all()->count(),
+            'staffs'            => Schedule::where('acceptance', '!=', null)->count()
         ]);
     }
 
